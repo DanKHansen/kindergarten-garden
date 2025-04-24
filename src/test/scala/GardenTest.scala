@@ -3,7 +3,7 @@ import org.scalatest.matchers.should.Matchers
 
 
 /** @version 1.1.1 */
-class KindergartenGardenTest extends AnyFunSuite with Matchers {
+class GardenTest extends AnyFunSuite with Matchers {
 
   test("partial garden - garden with single student") {
     Garden.defaultGarden("RC\nGG").plants("Alice") should be(

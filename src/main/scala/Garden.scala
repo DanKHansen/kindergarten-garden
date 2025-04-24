@@ -3,8 +3,8 @@ enum Plant:
 
 case class Garden(s: String):
    def plants(name: String): List[Plant] =
-      val Array(firstRow, secondRow) = s.split("\n").map(_.sliding(2, 2).toList)
-      (firstRow(name.head - 'A') ++ secondRow(name.head - 'A'))
+      val rows = s.split("\n").map(_.sliding(2, 2).toList)
+      (rows(0)(name.head - 'A') ++ rows(1)(name.head - 'A'))
          .flatMap(c => Plant.values.find(_.toString.head == c))
          .toList
 
